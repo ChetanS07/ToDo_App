@@ -6,7 +6,7 @@ const MongoDBStore = require('connect-mongodb-session')(session)
 const app = express()
 
 const store = new MongoDBStore({
-    uri: process.env.DB_URL,
+    uri: process.env.DB_URL_ATLAS,
     collection: 'mySessions'
 })
 
