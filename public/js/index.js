@@ -40,3 +40,9 @@ const handleClick = (event) => {
     }
 }
 
+const viewListNames = () => {
+    const list = document.querySelector('.right-section')
+    const logoutBtn = document.querySelector('.nav-item')
+    list.classList.toggle('hide')
+    logoutBtn.classList.toggle('hide')
+}

@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: #171717; */
 }
 
@@ -38,7 +38,8 @@ font-family: 'Russo One', sans-serif;
 .list-body {
     align-items: unset;
     border: 1px solid;
-    flex: 87%;
+    /* flex: 87%; */
+    height: 89.5vh;
     box-sizing: border-box;
 
     background-color: rgb(247, 230, 196, 0.9);

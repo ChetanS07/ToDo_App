@@ -1,0 +1,137 @@
+@media screen and (max-width : 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* navbar */
+
+    .nav-items {
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-item {
+        position: absolute;
+        right: 1rem;
+        top: 5rem;
+        background-color: black;
+        z-index: 5;
+    }
+
+    .nav-link {
+        background-color: black;
+        border: 1px solid grey;
+    }
+
+    #menu-btn {
+        display: block;
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 1.5rem;
+    }
+
+    /* list items */
+
+    .list-body {
+        /* min-height: 89.5vh; */
+        height: auto;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .basic-list-wrapper {
+        padding: 3rem 0;
+        /* min-height: auto; */
+        /* display: none; */
+        box-sizing: border-box;
+    }
+
+    .left-section {
+        height: auto;
+        width: 100%;
+        /* flex: 100%; */
+
+    }
+
+    .list-heading-wrapper {
+        margin-right: 13rem;
+        font-size: 1rem;
+    }
+
+    .input-cell-wrapper {
+        width: 80%;
+        padding: .5rem .2rem .5rem 1rem;
+        /* font-size: 1rem; */
+    }
+
+    .item-input-cell {
+        padding: .5rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .basic-list {
+        min-height: 61vh;
+        justify-content: unset;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .list-item-cell {
+        padding: .4rem 1rem;
+        width: 70%;
+    }
+
+    .item-text-wrapper span {
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0 1.5rem;
+    }
+
+    .item-checkbox {
+        scale: 1.3;
+    }
+
+    /* list names */
+
+    .right-section {
+        /* display: none; */
+        position: absolute;
+        background-color: rgb(54, 54, 52);
+        z-index: 1;
+        width: 100%;
+        /* right: -40rem; */
+        height: auto;
+        /* min-height: 82.7vh; */
+        padding: 3rem .5rem;
+        gap: 0rem;
+        justify-content: unset;
+        /* align-items: unset; */
+    }
+
+    .lists-wrapper {
+        /* min-height: 82.7vh; */
+        justify-content: unset;
+        /* align-items: unset; */
+        padding: 2rem 0 1rem 0;
+        gap: 0;
+    }
+
+    .lists-heading {
+        color: aliceblue;
+    }
+
+    .list-name-wrapper a {
+        /* gap: 1rem; */
+        font-size: 1.2rem;
+    }
+
+    .create-list-wrapper input {
+        font-size: 1rem;
+    }
+
+    .hide {
+        display: none;
+    }
+}
