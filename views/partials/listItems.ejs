@@ -1,0 +1,51 @@
+<div class="basic-list-wrapper flex-aj">
+    <div class="list-heading-wrapper">
+        <h1>
+            <b>
+                <%= itemsList.listName %>
+            </b>
+
+        </h1>
+    </div>
+
+    <!-- item input -->
+    <form action="/db/addItem" method="post" class="input-cell-wrapper flex-aj">
+        <input type="text" class="item-input-cell" name="itemName" placeholder="Insert Item Here" required>
+        <input type="text" name="listName" value="<%=itemsList.listName%>" hidden>
+        <div class="item-btn-wrapper flex-aj">
+            <button class="item-btn"><i class="fa-solid fa-plus fa-xl" style="color: rgb(255, 255, 255);"></i></button>
+        </div>
+    </form>
+
+    <!-- list item -->
+    <div class="basic-list flex-aj">
+
+        <% itemsList.itemList.forEach(item=> { %>
+            <!-- item cell -->
+            <div class="list-item-cell flex-aj">
+                <!-- checkbox -->
+                <form action="/db/deleteItem" method="post" class="flex-aj" id="checkbox-wrapper">
+                    <input type="checkbox" name="itemName" class="item-checkbox" id="<%=item._id%>"
+                        value="<%=item.itemName%>" onchange="this.form.submit()">
+                    <input type="text" name="listName" value="<%=itemsList.listName%>" hidden>
+                </form>
+
+                <!-- item-text -->
+                <label for="<%=item._id%>" class="item-text-wrapper">
+                    <span class="item-text">
+                        <%= item.itemName%>
+                    </span>
+                </label>
+
+                <!-- delete icon -->
+                <!-- <form action="/db/deleteItem" method="post" class="delete-icon">
+                    <input type="text" name="item-to-delete" value="item2" hidden>
+                    <button type="submit" class="delete-icon-btn">
+                        <i class="fa-solid fa-trash fa-2xl delete-icon" style="color: #a40000;"></i>
+                    </button>
+                </form> -->
+
+            </div>
+            <%})%>
+    </div>
+</div>

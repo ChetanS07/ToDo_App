@@ -1,0 +1,42 @@
+.navbar {
+    flex: 8%;
+    padding: .5rem 6rem .5rem 3rem;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+
+    background-color: #171717;
+    color: aliceblue;
+
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+.nav-items {
+    width: 100%;
+    list-style-type: none;
+    box-sizing: border-box;
+    justify-content: space-between !important;
+    margin: 0;
+}
+
+.nav-logo {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    border: 1px solid;
+    padding: .3rem 2rem;
+    border-radius: .4rem;
+}
+
+.footer {
+    flex: 5%;
+    background: radial-gradient(circle at 74.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    color: aliceblue;
+    gap: 1rem;
+}
+
+.copyright {}

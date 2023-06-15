@@ -1,0 +1,32 @@
+<div class="right-section flex-aj">
+    <div class="lists-wrapper flex-aj">
+        <h2 class="lists-heading">Your Lists</h2>
+        <div class="list-name-wrapper flex-aj">
+            <% listNames.forEach(name=> { %>
+                <% if(name.listType==="custom" ) {%>
+                    <form class="list-name-cell flex-aj" action="/db/deleteList" method="post">
+                        <a href="/<%=name.listName%>" class="list-name">
+                            <%=name.listName%>
+                        </a>
+                        <input name="listName" value="<%= name.listName%>" hidden>
+                        <button type="submit" class="submit-btn">
+                            <i class="fa-regular fa-square-minus fa-2xl delete-icon"></i>
+                        </button>
+                    </form>
+                    <% } else { %>
+                        <div class="list-name-cell flex-aj">
+                            <a href="/home" class="list-name">
+                                <%=name.listName%>
+                            </a>
+                        </div>
+                        <%}%>
+                            <%}) %>
+        </div>
+    </div>
+
+    <form action="/db/createList" method="post" class="create-list-wrapper flex-aj">
+        <input type="text" class="new-lname-input" placeholder="Enter New List Name" name="listName">
+        <button class="create-btn" type="submit">Create</button>
+    </form>
+
+</div>

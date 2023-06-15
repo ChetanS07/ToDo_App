@@ -1,0 +1,60 @@
+<%- include('./partials/header.ejs'); %>
+    <div class="login-body">
+        <div class="login-left-section flex-aj">
+            <div>
+                <h1>Your ToDo App</h1>
+                <p>Elevate your productivity game with our intuitive app</p>
+                <p>Your ultimate productivity companion</p>
+            </div>
+            <div class="contact-icons">
+                <a target="_blank" href="https://twitter.com/ChetanShetter" class="contact-icon">
+                    <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/chetan_shetter/" class="contact-icon">
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/chennabasappa-g-shetter-25a5b4227/"
+                    class="contact-icon">
+                    <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+                <a target="_blank" href="https://github.com/ChetanS07" class="contact-icon">
+                    <i class="fa-brands fa-github fa-xl"></i>
+                </a>
+                <a target="_blank" href="" class="contact-icon">
+                    <i class="fa-brands fa-youtube fa-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="login-right-section flex-aj">
+            <div class="login-wrapper flex-aj">
+                <div class="lr-btn-wrapper">
+                    <button class="register-btn" id="login-btn" onclick="handleClick(this)"
+                        style="background-color: #3465a4;">Login</button>
+                    <button class=" register-btn" id="register-btn" onclick="handleClick(this)">Register</button>
+                </div>
+                <form action="/login" method="post" class="basic-login-wrapper flex-aj" id="login-form">
+                    <div class="flex-aj login-field-wrapper">
+                        <input type="text" id="userId" class="login-field" name="userId" placeholder="Enter User Name">
+                    </div>
+                    <div class="flex-aj login-field-wrapper">
+                        <input type="text" id="password" class="login-field" name="password"
+                            placeholder="Enter Password">
+                    </div>
+                    <div class="flex-aj login-field-wrapper" id="cnf-pass" style="display: none;">
+                        <input type="text" id="confirm-password" class="login-field" name="confirmPassword"
+                            placeholder="Confirm Password" onkeyup="confirmPass(this)">
+                    </div>
+                    <p id="cnf-password-toast" style="display: none;">password doesn't match</p>
+
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <p>or</p>
+                <form action="/auth/google" class="google-login-wrapper">
+                    <button class="google-login-btn" type="submit"><i class="fa-brands fa-google-plus-g fa-xl"
+                            style="color: #3465a4;"></i><span>Login
+                            Using Google</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer.ejs'); %>
