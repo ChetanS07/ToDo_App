@@ -49,6 +49,8 @@ const renderList = async (req, res) => {
     const listName = req.params.listName
     const userId = req.session.userId
 
+    if(req.isAuth){
+        
     const itemsList = await getListItems(userId, listName)
     const lists = await getListNames(userId)
 
@@ -57,6 +59,9 @@ const renderList = async (req, res) => {
         res.render('index.ejs', { itemsList: itemsList, listNames: lists });
     } else {
         console.log('renderList : Failed to render listNames and listItems');
+        res.redirect('/')
+    }
+    }else{
         res.redirect('/')
     }
 
